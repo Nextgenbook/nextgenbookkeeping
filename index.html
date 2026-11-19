@@ -38,15 +38,13 @@
       display: flex; align-items: center; justify-content: space-between;
       flex-wrap: wrap; gap: 12px; padding: 6px 0;
     }
-    /* Crop the logo so the text inside it is large and readable.
-       The logo file has a lot of empty space around it, so the frame shows only the mark + text. */
     .brand {
       position: relative; width: 330px; height: 132px; overflow: hidden;
     }
     .brand img {
       position: absolute; left: -56px; top: -56px;
       width: 420px; max-width: none;
-      mix-blend-mode: multiply; /* blends the off-white logo background into the white header */
+      mix-blend-mode: multiply;
     }
     .nav ul { display: flex; gap: 26px; list-style: none; }
     .nav ul a { font-weight: 600; color: var(--navy); font-size: 15px; }
@@ -60,7 +58,7 @@
       transition: background .2s, color .2s, transform .2s;
     }
     .btn:hover { transform: translateY(-2px); }
-    .btn svg { width: 20px; height: 20px; flex-shrink: 0; }
+    .btn img { width: 20px; height: 20px; flex-shrink: 0; }
     .btn-primary { background: var(--blue); color: #fff; }
     .btn-primary:hover { background: var(--navy); }
     .btn-whatsapp { background: var(--whatsapp); color: #fff; }
@@ -100,7 +98,7 @@
     }
     .section-head p { color: var(--muted); font-size: 17px; }
 
-    /* ---------- Service cards (unchanged) ---------- */
+    /* ---------- Service cards ---------- */
     .grid {
       display: grid; gap: 24px;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -147,7 +145,6 @@
     }
     .profile:hover .link { color: var(--teal); }
 
-    /* Brand mark styles */
     .mark-linkedin {
       width: 44px; height: 44px; border-radius: 8px; background: #0a66c2;
       color: #fff; font-weight: 800; font-size: 24px;
@@ -218,7 +215,6 @@
 </head>
 <body>
 
-  <!-- Header -->
   <header>
     <div class="container nav">
       <a href="#home" class="brand" aria-label="NextGen Bookkeeping home">
@@ -237,7 +233,6 @@
   </header>
 
   <main>
-    <!-- Hero -->
     <div class="hero" id="home">
       <div class="container">
         <h1>Take Control of Your Business Finances</h1>
@@ -245,7 +240,7 @@
         <div class="cta-row">
           <a class="btn btn-primary" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0dz2QSKK6B-wbaIiB4XN49xm9ouX32jfAqMHHeDQsjE_jPiLU410Rm8F9-kMw11O3Rwdi-V_88" target="_blank" rel="noopener">Book a Free Consultation</a>
           <a class="btn btn-whatsapp" href="https://wa.me/8801828448707?text=Hello%2C%20I%20would%20like%20a%20free%20consultation" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm0 18.15c-1.48 0-2.93-.4-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.22 8.22 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24 4.54 0 8.24 3.7 8.24 8.24 0 4.54-3.7 8.24-8.24 8.24zm4.52-6.17c-.25-.12-1.46-.72-1.69-.8-.23-.08-.39-.12-.55.12-.17.25-.63.8-.77.96-.14.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.38-1.72-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.55-1.33-.76-1.82-.2-.48-.4-.41-.55-.42h-.47c-.17 0-.43.06-.66.31-.23.25-.87.85-.87 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.24 3.75.59.26 1.06.41 1.42.52.6.19 1.14.16 1.57.1.48-.07 1.46-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.1-.23-.17-.48-.29z"/></svg>
+            <img src="https://cdn.simpleicons.org/whatsapp/ffffff" width="20" height="20" alt="">
             WhatsApp Us
           </a>
           <a class="btn btn-ghost" href="#services">Explore Services</a>
@@ -261,7 +256,6 @@
       </div>
     </div>
 
-    <!-- Services (unchanged) -->
     <section id="services" class="alt">
       <div class="container">
         <div class="section-head">
@@ -309,7 +303,6 @@
       </div>
     </section>
 
-    <!-- Online profiles -->
     <section id="profiles">
       <div class="container">
         <div class="section-head">
@@ -342,7 +335,6 @@
       </div>
     </section>
 
-    <!-- Rating -->
     <section id="rating" class="alt">
       <div class="container">
         <div class="section-head">
@@ -366,7 +358,6 @@
       </div>
     </section>
 
-    <!-- Contact -->
     <section id="contact">
       <div class="container">
         <div class="contact-band">
@@ -375,4 +366,60 @@
           <div class="btn-row">
             <a class="btn btn-light" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0dz2QSKK6B-wbaIiB4XN49xm9ouX32jfAqMHHeDQsjE_jPiLU410Rm8F9-kMw11O3Rwdi-V_88" target="_blank" rel="noopener">Book a Free Consultation</a>
             <a class="btn btn-whatsapp" href="https://wa.me/8801828448707?text=Hello%2C%20I%20would%20like%20a%20free%20consultation" target="_blank" rel="noopener">
-              <svg viewBox="0 0 24 24" fill="currentColor"
+              <img src="https://cdn.simpleicons.org/whatsapp/ffffff" width="20" height="20" alt="">
+              WhatsApp Us
+            </a>
+          </div>
+          <div class="contact-meta">
+            <p><strong>Email:</strong> nextgenbookkeeping.online@gmail.com</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      &copy; 2026 NextGen Bookkeeping. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    const starButtons = document.querySelectorAll('#stars button');
+    let selectedRating = 0;
+
+    function paintStars(n) {
+      starButtons.forEach((b, i) => b.classList.toggle('active', i < n));
+    }
+
+    starButtons.forEach(b => {
+      b.addEventListener('click', () => {
+        selectedRating = Number(b.dataset.value);
+        paintStars(selectedRating);
+      });
+      b.addEventListener('mouseenter', () => paintStars(Number(b.dataset.value)));
+    });
+    document.getElementById('stars').addEventListener('mouseleave', () => paintStars(selectedRating));
+
+    document.getElementById('ratingForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const msg = document.getElementById('ratingMsg');
+
+      if (!selectedRating) {
+        msg.textContent = 'Please select a star rating first.';
+        return;
+      }
+
+      const name = document.getElementById('raterName').value.trim() || 'Anonymous';
+      const comment = document.getElementById('raterComment').value.trim() || '-';
+      const subject = 'Client Rating: ' + selectedRating + '/5';
+      const body = 'Rating: ' + selectedRating + '/5\nName: ' + name + '\nFeedback: ' + comment;
+
+      window.location.href =
+        'mailto:nextgenbookkeeping.online@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+      msg.textContent = 'Thank you! Your email app will open so you can send the rating.';
+    });
+  </script>
+
+</body>
+</html>
