@@ -105,25 +105,25 @@
       text-align: center;
     }
     .hero-grid {
-      display: grid; grid-template-columns: 1.25fr 0.75fr; gap: 48px; align-items: center;
+      display: grid; grid-template-columns: 1fr; justify-items: center;
     }
-    .hero-text { text-align: left; }
+    .hero-text { text-align: center; max-width: 860px; }
     .hero h1 {
       font-size: clamp(30px, 4vw, 48px); line-height: 1.15;
       color: var(--navy); margin: 0 0 18px;
     }
     .hero-text > p {
       font-size: 18px; color: var(--muted);
-      max-width: 620px; margin: 0 0 32px;
+      max-width: 680px; margin: 0 auto 32px;
     }
-    .cta-row { display: flex; gap: 14px; justify-content: flex-start; flex-wrap: wrap; }
+    .cta-row { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
     .hero-portrait { display: flex; justify-content: center; }
     .portrait-frame {
       width: min(380px, 100%); aspect-ratio: 4 / 5; border-radius: 20px; overflow: hidden;
       border: 6px solid #fff; box-shadow: 0 18px 44px rgba(11, 46, 79, .22);
     }
     .portrait-frame img { width: 100%; height: 100%; object-fit: cover; display: block; }
-    .platforms { margin-top: 40px; text-align: left; }
+    .platforms { margin-top: 40px; text-align: center; }
     .platforms p { font-size: 14px; color: var(--muted); margin-bottom: 12px; }
     .platforms span {
       display: inline-block; margin: 4px 6px; padding: 6px 16px;
@@ -387,11 +387,6 @@
           <span>Wave</span>
           <span>AppFolio</span>
         </div>
-        </div>
-        <div class="hero-portrait">
-          <div class="portrait-frame">
-            <img src="portrait.jpg" alt="Faisal Alam, remote QuickBooks Online and Xero bookkeeper at NextGen Bookkeeping" width="896" height="1120">
-          </div>
         </div>
       </div>
     </div>
